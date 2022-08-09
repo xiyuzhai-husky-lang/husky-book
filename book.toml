@@ -3,6 +3,6 @@ title = "The Husky Programming Language"
 authors = ["Xiyu Zhai"]
 
 [output.html]
-additional-css = ["ferris.css", "theme/2022-edition.css"]
-additional-js = ["ferris.js"]
+additional-css = ["sekiro.css", "theme/2022-edition.css"]
+additional-js = ["sekiro.js"]
 git-repository-url = "https://github.com/xiyuzhai/husky-book"
