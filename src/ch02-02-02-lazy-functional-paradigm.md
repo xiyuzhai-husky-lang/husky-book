@@ -1,1 +1,0 @@
-# Eager Functional Paradigm
