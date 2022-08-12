@@ -1,2 +1,2 @@
 # husky-book
-The Husky Programming Language
+Book for the Husky Programming Language
