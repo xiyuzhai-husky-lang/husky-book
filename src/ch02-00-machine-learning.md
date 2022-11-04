@@ -2,6 +2,7 @@
 
 ## Problem Setup
 
+<<<<<<< HEAD
 Consider the setup with an input space $\mathcal{X}$, an output space $\mathcal{Y}$, and a hypothesis class $\mathcal{H}$ containing functions from $\mathcal{X}$ to $\mathcal{Y}$. There is an unknown fixed $h\in\mathcal{H}$, and samples $(x_i,h(x_i))\in\mathcal{X}\times\mathcal{Y}, i=0,1,\ldots$
 
 Our goal is to approximate $h$. However, $h$ can be hard to compute from its mathematical definition, so may have to choose a different representation.
@@ -35,3 +36,13 @@ Too many choices: 28*28*28*28=1M, hard to compute
 ### Parsing in NLP
 
 
+=======
+Let $\mathcal{X}$ denote input space, and $\mathcal{Y}$ denote output space, and $\mathcal{H}$ denote hypothesis class.
+
+TODO: Jian Qian and Haochuan Li
+
+## Computational Complexity of Inference
+
+suppose
+we have implement
+>>>>>>> c85ae1a7b331dd4641834fa72151a3ddde3e1ae2
