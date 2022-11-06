@@ -1,5 +1,15 @@
 # Mnist
 
+### Arrive/Return/True/False/Null[0]/Null[_]
+
+
+### Connected component
+
+### Convex
+
+### Contour
+
+
 
 ### Fermi match
 
