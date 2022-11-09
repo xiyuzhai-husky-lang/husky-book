@@ -40,3 +40,6 @@
   - [Feature](ch08-02-feature.md)
   - [Events](ch08-03-events.md)
   - [Bindings](ch08-03-bindings.md)
+- [Type System](ch09-00-type-system.md)
+- [Custom Task](ch10-00-custom-task.md)
+- [Plugin](ch11-00-plugin.md)
