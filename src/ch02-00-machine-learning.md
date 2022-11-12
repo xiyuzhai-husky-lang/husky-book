@@ -2,7 +2,6 @@
 
 ## Problem Setup
 
-<<<<<<< HEAD
 Consider the setup with an input space $\mathcal{X}$, an output space $\mathcal{Y}$, and a hypothesis class $\mathcal{H}$ containing functions from $\mathcal{X}$ to $\mathcal{Y}$. There is an unknown fixed $h\in\mathcal{H}$, and samples $(x_i,h(x_i))\in\mathcal{X}\times\mathcal{Y}, i=0,1,\ldots$
 
 Our goal is to approximate $h$. However, $h$ can be hard to compute from its mathematical definition, so may have to choose a different representation.
@@ -33,6 +32,48 @@ Too many choices: 28*28*28*28=1M, hard to compute
 
 [1.png *2]
 
+
+
+### The Model for Mnist
+
+Let's first see what the model is like in the case of Mnist.
+
+We define the following features:
+
+- `raw_input`: this is the raw input of mnist dataset, $28\times 28$ gray scale image;
+
+- `binary_image`: a binary image obtained from thresholding `raw_input`.
+
+- `connected_components`: the set of connected components of `binary_image`.
+
+- `major_connected_component`: a single connected region obtained from connected_components so that:
+
+  - equals `connected_components[0]` when there is only one connected components
+
+  - when there are two very close connected components, say, $A$ and $B$, then `major_connected_component` contains points that satisfies one of
+
+    - is a point in $A$
+    - is a point in $B$
+    - is a point in a path from $A$ to $B$ of length no more than $dist(A, B) + \epsilon$, where $dist(A, B)$ is the canonical distance between $A$ and $B$ and $\epsilon$ is a very small positive number.
+
+  - otherwise, equals the largest one
+
+- `major_raw_contours`: the set of contours of `major_connected_component` represented by `Vec<Vec<Point2d>>`. The convention is that `major_raw_contours[0]` is always the counterclosewise (also the outer) one.
+
+![alt text](../snapshots/generic-major-raw-contours.png)
+
+- `major_line_segment_sketch`: line segment sketch of `major_raw_contours[0]`. This sketching is roughly speaking, very similar to that in painting. This is key to our interpretable and efficient processing of shapes. It's quite natural, as this technique has been developed in painting for thousands of years.
+
+![alt text](../snapshots/generic-major-line-segment-sketch.png)
+
+- `major_concave_components`
+
+![alt text](../snapshots/generic-major-concave-components.png)
+
+
+
+
+
 ### Parsing in NLP
 
 
@@ -45,4 +86,8 @@ TODO: Jian Qian and Haochuan Li
 
 suppose
 we have implement
->>>>>>> c85ae1a7b331dd4641834fa72151a3ddde3e1ae2
+
+
+
+
+
