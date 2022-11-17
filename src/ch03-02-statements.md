@@ -75,12 +75,59 @@ match a into
 
 ## loop statment
 
-### `for` loop
+### `for`
+```rust
+for i < 10: // i=0, 1, 2, ... , 9
+    ...
+```
 
-### `for in` loop
+```rust
+for i > -10: // i=0, -1, -2, ... , -9
+    ...
+```
 
-### `while` loop
+```rust
+for 3 <= i <= 9: // i = 3, 4, ... , 9
+    ...
+```
 
-### `forext` loop
+```rust
+for 9 >= i > 2: // i = 9, 8, ... , 3
+    ...
+```
 
-### `do while` loop
+### `for in` 
+
+```rust
+for i in 1..10: // i = 1, 2, ... , 9
+    ...
+```
+
+```rust
+for i in a_list // i = 1, 2, ... , 9
+    ...
+```
+
+
+
+### `while` 
+
+```python
+while i < 10:
+    <do something>
+```
+
+### `forext` 
+
+```rust
+var i = 9
+forext i > 0: // i = 9, 8, ..., 1
+    <do something>
+```
+
+### `do while` 
+```python
+var i = 9
+do while i > 0:
+    <do something>
+```
